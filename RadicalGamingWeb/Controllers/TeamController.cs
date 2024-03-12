@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using RadicalGamingWeb.Data;
-using RadicalGamingWeb.Models;
+using RadicalGaming.DataAccess.Data;
+using RadicalGaming.Model;
 
 namespace RadicalGamingWeb.Controllers
 {

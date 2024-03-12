@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace RadicalGamingWeb.Migrations
+namespace RadicalGaming.DataAccess.Migrations
 {
     /// <inheritdoc />
     public partial class AddTeamTableToDb : Migration

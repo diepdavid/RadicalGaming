@@ -4,7 +4,7 @@
 
 #pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
 
-namespace RadicalGamingWeb.Migrations
+namespace RadicalGaming.DataAccess.Migrations
 {
     /// <inheritdoc />
     public partial class SeedTeamTable : Migration

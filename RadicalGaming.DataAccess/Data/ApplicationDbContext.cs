@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using RadicalGamingWeb.Models;
+using RadicalGaming.Model;
 
-namespace RadicalGamingWeb.Data
+namespace RadicalGaming.DataAccess.Data
 {
     public class ApplicationDbContext : DbContext
     {
