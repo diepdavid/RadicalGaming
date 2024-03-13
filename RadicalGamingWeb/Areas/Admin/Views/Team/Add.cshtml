@@ -4,17 +4,16 @@
     <div class="card-header bg-secondary bg-gradient ml-0 py-3">
         <div class="row">
             <div class="col-12 text-center">
-                <h2 class="text-white">Edit Member</h2>
-            </div>
+                <h2 class="text-white">Add New Member</h2>
+             </div>
         </div>
     </div>
     <div class="card-body p-4">
-        <form method="post">
-            <input asp-for="Id" hidden />
+        <form method="post" class="row">
             <div class="border-0 p-3">
                 <div class="mb-3 row p-1"> <!-- row gör så det bli responsive -->
                     <label asp-for="Name" class="p-0"></label>
-                    <input asp-for="Name" class="form-control"/> <!-- form-control gör så den fylls ut -->
+                    <input asp-for="Name" class="form-control" /> <!-- form-control gör så den fylls ut -->
                     <span asp-validation-for="Name" class="text-danger"></span> <!-- Om det bli någon error för Name så syns det med röd text -->
                 </div>
                 <div class="mb-3 row p-1">
@@ -22,22 +21,25 @@
                     <input asp-for="DisplayOrder" class="form-control"/>
                     <span asp-validation-for="DisplayOrder" class="text-danger"></span>
                 </div>
-
+        
                 <div class="row">
                     <div class="col-6 col-md-3">
-                        <button type="submit" class="btn btn-primary form-control">Update</button>
+                        <button type="submit" class="btn btn-primary form-control">Add</button>
                     </div>
                     <div class="col-6 col-md-3"> <!-- Buttons ta 6 col vi -->
-                        <a asp-controller="Team" asp-action="Index" class="btn btn-outline-secondary border form-control">Back To List</a>
+                        <a asp-controller="Team" asp-action="Index" class="btn btn-secondary border form-control">Back To List</a>
                     </div>
                 </div>
             </div>
-        </form>  
+        </form>
     </div>
 </div>
+
+
 
 @section Scripts {
     @{
         <partial name="_ValidationScriptsPartial"/>   
     }    
 }
+

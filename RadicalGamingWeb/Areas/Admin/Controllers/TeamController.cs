@@ -1,20 +1,22 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using RadicalGaming.DataAccess.Data;
+using RadicalGaming.DataAccess.Repository.IRepository;
 using RadicalGaming.Model;
 
-namespace RadicalGamingWeb.Controllers
+namespace RadicalGamingWeb.Areas.Admin.Controllers
 {
+    [Area("Admin")]
     public class TeamController : Controller
     {
-        private readonly ApplicationDbContext _db;
-        public TeamController(ApplicationDbContext db)
+        private readonly IUnitOfWork _unitOfWork;
+        public TeamController(IUnitOfWork unitOfWork)
         {
-            _db = db;
+            _unitOfWork = unitOfWork;
         }
         public IActionResult Index()
         {
             // Hämta listan från databasen och skicka det till view
-            List<Team> objTeamList = _db.Team.ToList();
+            List<Team> objTeamList = _unitOfWork.Team.GetAll().ToList();
             return View(objTeamList);
         }
 
@@ -31,8 +33,8 @@ namespace RadicalGamingWeb.Controllers
             }
             if (ModelState.IsValid)
             {
-                _db.Team.Add(obj);
-                _db.SaveChanges();
+                _unitOfWork.Team.Add(obj);
+                _unitOfWork.Save();
                 TempData["success"] = "Category added successfully";
                 return RedirectToAction("Index", "Team");
             }
@@ -47,7 +49,7 @@ namespace RadicalGamingWeb.Controllers
                 return NotFound();
             }
 
-            Team teamFromDb = _db.Team.Find(id);
+            Team teamFromDb = _unitOfWork.Team.Get(u => u.Id == id);
             if (teamFromDb == null)
             {
                 return NotFound();
@@ -60,8 +62,8 @@ namespace RadicalGamingWeb.Controllers
         {
             if (ModelState.IsValid)
             {
-                _db.Team.Update(obj);
-                _db.SaveChanges();
+                _unitOfWork.Team.Update(obj);
+                _unitOfWork.Save();
                 TempData["success"] = "Category updated successfully";
                 return RedirectToAction("Index", "Team");
             }
@@ -76,7 +78,7 @@ namespace RadicalGamingWeb.Controllers
                 return NotFound();
             }
 
-            Team teamFromDb = _db.Team.Find(id);
+            Team teamFromDb = _unitOfWork.Team.Get(u => u.Id == id);
             if (teamFromDb == null)
             {
                 return NotFound();
@@ -87,15 +89,15 @@ namespace RadicalGamingWeb.Controllers
         [HttpPost, ActionName("Delete")]
         public IActionResult DeletePost(int? id)
         {
-            Team? obj = _db.Team.Find(id);
+            Team? obj = _unitOfWork.Team.Get(u => u.Id == id);
             {
                 if (obj == null)
                 {
                     return NotFound();
                 }
             }
-            _db.Team.Remove(obj);
-            _db.SaveChanges();
+            _unitOfWork.Team.Remove(obj);
+            _unitOfWork.Save();
             TempData["success"] = "Category deleted successfully";
             return RedirectToAction("Index");
         }
