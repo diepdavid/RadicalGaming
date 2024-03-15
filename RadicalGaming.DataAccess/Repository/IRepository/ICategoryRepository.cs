@@ -3,14 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using RadicalGaming.Model;
 
 namespace RadicalGaming.DataAccess.Repository.IRepository
 {
-    public interface IUnitOfWork
+    public interface ICategoryRepository : IRepository<Category>
     {
-        ITeamRepository Team { get; }
-        ICategoryRepository Category { get; }
-        IProductRepository Product { get; }
-        void Save();
+        void Update(Category obj);
     }
 }

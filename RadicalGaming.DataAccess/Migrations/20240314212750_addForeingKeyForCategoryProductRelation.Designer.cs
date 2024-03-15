@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RadicalGaming.DataAccess.Data;
 
@@ -10,9 +11,11 @@ using RadicalGaming.DataAccess.Data;
 namespace RadicalGaming.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240314212750_addForeingKeyForCategoryProductRelation")]
+    partial class addForeingKeyForCategoryProductRelation
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -46,7 +49,7 @@ namespace RadicalGaming.DataAccess.Migrations
                         {
                             Id = 1,
                             DisplayOrder = 1,
-                            Name = "GamingMouse"
+                            Name = "Mouse"
                         },
                         new
                         {
@@ -77,10 +80,6 @@ namespace RadicalGaming.DataAccess.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ImageUrl")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<double>("Price")
                         .HasColumnType("float");
 
@@ -100,7 +99,6 @@ namespace RadicalGaming.DataAccess.Migrations
                             Id = 1,
                             CategoryId = 1,
                             Description = "Achieve the next level of absolute control with the Razer Viper 8KHz, a ambidextrous e-sports mouse with a true 8000 Hz polling rate for the fastest speed and lowest latency ever achieved.",
-                            ImageUrl = "",
                             Price = 69.0,
                             Title = "Viper Gamingmouse"
                         },
@@ -109,7 +107,6 @@ namespace RadicalGaming.DataAccess.Migrations
                             Id = 2,
                             CategoryId = 2,
                             Description = "Mechanical gaming keyboard with Chroma RGB (Digital multifunction wheel and media keys, Ergonomic wrist rest) Black, Nordic/Swedish layout",
-                            ImageUrl = "",
                             Price = 139.0,
                             Title = "BlackWidow V3 Keyboard"
                         },
@@ -118,7 +115,6 @@ namespace RadicalGaming.DataAccess.Migrations
                             Id = 3,
                             CategoryId = 3,
                             Description = "Defeat all enemies with the Razer Kraken X Lite gaming headset. With lightweight design, 7.1 surround sound, reliable microphone, and versatile compatibility, you can take on any challenge.",
-                            ImageUrl = "",
                             Price = 39.0,
                             Title = "Kraken X Headset"
                         });
@@ -167,7 +163,7 @@ namespace RadicalGaming.DataAccess.Migrations
                         {
                             Id = 4,
                             DisplayOrder = 4,
-                            Name = "Rickard"
+                            Name = "Rick"
                         });
                 });
 
