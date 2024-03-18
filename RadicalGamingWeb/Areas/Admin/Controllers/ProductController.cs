@@ -20,7 +20,7 @@ namespace RadicalGamingWeb.Areas.Admin.Controllers
         public IActionResult Index()
         {
             // Hämta listan från databasen och skicka det till view
-            List<Product> objProductList = _unitOfWork.Product.GetAll().ToList();
+            List<Product> objProductList = _unitOfWork.Product.GetAll(includeProperties:"Category").ToList();
 
             return View(objProductList);
         }
@@ -136,5 +136,16 @@ namespace RadicalGamingWeb.Areas.Admin.Controllers
             TempData["success"] = "Product deleted successfully";
             return RedirectToAction("Index");
         }
+
+        //#region API CALLS
+
+        //[HttpGet]
+        //public IActionResult Get()
+        //{
+        //    List<Product> objProductList = _unitOfWork.Product.GetAll(includeProperties: "Category").ToList();
+        //    return Json(new { data = objProductList });
+        //}
+
+        //#endregion
     }
 }

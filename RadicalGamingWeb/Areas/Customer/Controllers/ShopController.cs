@@ -7,23 +7,27 @@ using RadicalGaming.Model;
 namespace RadicalGamingWeb.Areas.Customer.Controllers
 {
     [Area("Customer")]
-    public class HomeController : Controller
+    public class ShopController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly ILogger<ShopController> _logger;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public HomeController(ILogger<HomeController> logger)
+        public ShopController(ILogger<ShopController> logger, IUnitOfWork unitOfWork)
         {
             _logger = logger;
+            _unitOfWork = unitOfWork;
         }
 
         public IActionResult Index()
         {
-            return View();
+            IEnumerable<Product> productList = _unitOfWork.Product.GetAll(includeProperties: "Category");
+            return View(productList);
         }
 
-        public IActionResult Privacy()
+        public IActionResult Details(int productId)
         {
-            return View();
+            Product product = _unitOfWork.Product.Get(u=>u.Id == productId, includeProperties: "Category");
+            return View(product);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

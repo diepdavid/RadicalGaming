@@ -1,4 +1,4 @@
-﻿@model List<RadicalGaming.Model.Product>
+﻿@model List<Product>
 
 <div class="card shadow border-0 mt-4">
     <div class="card-header bg-secondary bg-gradient ml-0 py-3">
@@ -19,7 +19,7 @@
             </div>
         </div>
 
-        <table class="table table-bordered table-striped">
+        <table id="tblData" class="table table-bordered table-striped">
             <thead>
             <tr>
                 <th>Title</th>
@@ -32,15 +32,9 @@
             @foreach (var obj in Model)
             {
                 <tr>
-                    <td>
-                        @obj.Title
-                    </td>
-                    <td>
-                        @obj.Price
-                    </td>
-                    <td>
-
-                    </td>
+                    <td>@obj.Title</td>
+                    <td>@obj.Price</td>
+                    <td>@obj.Category.Name</td>
                     <td>
                         <div class="w-75 btn-group" role="group">
                             <a asp-controller="Product" asp-action="Upsert" asp-route-id="@obj.Id" class="btn btn-primary mx-2">
@@ -57,3 +51,8 @@
         </table>
     </div>
 </div>
+
+@section Scripts
+{
+    <script src="~/js/product.js"></script>
+}
