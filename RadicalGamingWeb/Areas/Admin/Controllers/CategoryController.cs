@@ -1,11 +1,14 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using RadicalGaming.DataAccess.Data;
 using RadicalGaming.DataAccess.Repository.IRepository;
 using RadicalGaming.Model;
+using RadicalGaming.Utility;
 
 namespace RadicalGamingWeb.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = SD.Role_Admin)]
     public class CategoryController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
