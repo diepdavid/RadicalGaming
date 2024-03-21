@@ -66,8 +66,7 @@ namespace RadicalGamingWeb.Areas.Identity.Pages.Account.Manage
             public string? City { get; set; }
             public string? State { get; set; }
             public string? PostalCode { get; set; }
-            public IFormFile? ProfilePictureFile { get; set; }
-            public string? ImageUrl { get; set; }
+            public byte[]? ProfilePicture { get; set; }
         }
 
         private async Task LoadAsync(ApplicationUser user)
@@ -82,6 +81,8 @@ namespace RadicalGamingWeb.Areas.Identity.Pages.Account.Manage
             var city = user.City;
             var state = user.State;
             var postalCode = user.PostalCode;
+            var profilePicture = user.ProfilePicture;
+
 
             Input = new InputModel
             {
@@ -90,7 +91,8 @@ namespace RadicalGamingWeb.Areas.Identity.Pages.Account.Manage
                 StreetAddress = streetAddress,
                 City = city,
                 State = state,
-                PostalCode = postalCode
+                PostalCode = postalCode,
+                ProfilePicture = profilePicture
             };
         }
 
@@ -115,6 +117,7 @@ namespace RadicalGamingWeb.Areas.Identity.Pages.Account.Manage
             var city = user.City;
             var state = user.State;
             var postalCode = user.PostalCode;
+            var profilePicture = user.ProfilePicture;
 
             if (user == null)
             {
@@ -136,6 +139,21 @@ namespace RadicalGamingWeb.Areas.Identity.Pages.Account.Manage
                     StatusMessage = "Unexpected error when trying to set phone number.";
                     return RedirectToPage();
                 }
+            }
+
+            if (Request.Form.Files.Count > 0)
+            {
+                var file = Request.Form.Files.FirstOrDefault();
+
+                //check file size and extension
+
+                using (var dataStream = new MemoryStream())
+                {
+                    await file.CopyToAsync(dataStream);
+                    user.ProfilePicture = dataStream.ToArray();
+                }
+
+                await _userManager.UpdateAsync(user);
             }
 
             if (Input.Name != user.Name)
@@ -164,6 +182,7 @@ namespace RadicalGamingWeb.Areas.Identity.Pages.Account.Manage
             {
                 user.PostalCode = Input.PostalCode;
             }
+
 
             await _userManager.UpdateAsync(user);
             await _signInManager.RefreshSignInAsync(user);

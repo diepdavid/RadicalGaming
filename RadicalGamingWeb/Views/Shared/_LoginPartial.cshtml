@@ -6,19 +6,14 @@
 <ul class="navbar-nav">
 @if (SignInManager.IsSignedIn(User))
 {
+    @if (UserManager.GetUserAsync(User).Result.ProfilePicture != null)
+    {
+        <li class="nav-item">
+            <img class="avatar rounded-circle" alt="profile" src="data:image/*;base64,@(Convert.ToBase64String(UserManager.GetUserAsync(User).Result.ProfilePicture))"/>
+        </li>
+    }
     <li class="nav-item">
-        <a id="manage" class="nav-link " asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">
-            @if (User.Claims.Any(c => c.Type == "ImageUrl"))
-            {
-                <img src="@User.Claims.First(c => c.Type == "ImageUrl").Value" 
-                     alt="Profile Picture" class="rounded-circle" style="width: 32px; height: 32px; object-fit: cover;">
-            }
-            else
-            {
-                <img src="~/images/profile/default-profile-picture.png"
-                     alt="Default Profile Picture" class="rounded-circle" style="width: 32px; height: 32px; object-fit: cover;">
-            }
-            @UserManager.GetUserName(User)
+        <a id="manage" class="nav-link " asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">@UserManager.GetUserName(User)
         </a>
     </li>
     <li class="nav-item">

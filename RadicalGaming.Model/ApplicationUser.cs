@@ -22,5 +22,6 @@ namespace RadicalGaming.Model
         public string? State { get; set; }
         public string? PostalCode { get; set; }
         public string? ImageUrl { get; set; }
+        public byte[] ProfilePicture { get; set; }
     }
 }
