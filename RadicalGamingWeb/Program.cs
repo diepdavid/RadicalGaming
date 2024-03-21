@@ -4,6 +4,7 @@ using RadicalGaming.DataAccess.Repository;
 using RadicalGaming.DataAccess.Repository.IRepository;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
+using RadicalGaming.Model;
 using RadicalGaming.Utility;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,13 +14,14 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-builder.Services.AddIdentity<IdentityUser,IdentityRole>().AddEntityFrameworkStores<ApplicationDbContext>().AddDefaultTokenProviders();
+builder.Services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<ApplicationDbContext>().AddDefaultTokenProviders();
 builder.Services.ConfigureApplicationCookie(options =>
 {
     options.LoginPath = $"/Identity/Account/Login";
     options.LogoutPath = $"/Identity/Account/Logout";
     options.AccessDeniedPath = $"/Identity/Account/AccessDenied";
 });
+
 builder.Services.AddRazorPages();
 builder.Services.AddScoped<IFileUploadService, LocalFileUploadService>();
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();

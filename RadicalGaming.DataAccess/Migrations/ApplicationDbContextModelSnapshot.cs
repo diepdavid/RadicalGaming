@@ -247,7 +247,7 @@ namespace RadicalGaming.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Category");
+                    b.ToTable("Category", (string)null);
 
                     b.HasData(
                         new
@@ -300,7 +300,7 @@ namespace RadicalGaming.DataAccess.Migrations
 
                     b.HasIndex("CategoryId");
 
-                    b.ToTable("Product");
+                    b.ToTable("Product", (string)null);
 
                     b.HasData(
                         new
@@ -350,7 +350,7 @@ namespace RadicalGaming.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Team");
+                    b.ToTable("Team", (string)null);
 
                     b.HasData(
                         new
@@ -402,7 +402,7 @@ namespace RadicalGaming.DataAccess.Migrations
                     b.Property<string>("State")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("StreetAdress")
+                    b.Property<string>("StreetAddress")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasDiscriminator().HasValue("ApplicationUser");

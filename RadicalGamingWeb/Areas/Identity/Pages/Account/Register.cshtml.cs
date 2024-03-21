@@ -188,7 +188,7 @@ namespace RadicalGamingWeb.Areas.Identity.Pages.Account
                 await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
                 user.Name = Input.Name;
-                user.StreetAdress = Input.StreetAddress;
+                user.StreetAddress = Input.StreetAddress;
                 user.City = Input.City;
                 user.State = Input.State;
                 user.PostalCode = Input.PostalCode;

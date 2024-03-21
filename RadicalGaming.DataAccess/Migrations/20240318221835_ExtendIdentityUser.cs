@@ -43,7 +43,7 @@ namespace RadicalGaming.DataAccess.Migrations
                 nullable: true);
 
             migrationBuilder.AddColumn<string>(
-                name: "StreetAdress",
+                name: "StreetAddress",
                 table: "AspNetUsers",
                 type: "nvarchar(max)",
                 nullable: true);
@@ -73,7 +73,7 @@ namespace RadicalGaming.DataAccess.Migrations
                 table: "AspNetUsers");
 
             migrationBuilder.DropColumn(
-                name: "StreetAdress",
+                name: "StreetAddress",
                 table: "AspNetUsers");
         }
     }

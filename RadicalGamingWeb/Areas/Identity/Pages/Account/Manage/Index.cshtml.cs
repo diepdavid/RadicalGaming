@@ -9,17 +9,18 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using RadicalGaming.Model;
 
 namespace RadicalGamingWeb.Areas.Identity.Pages.Account.Manage
 {
     public class IndexModel : PageModel
     {
-        private readonly UserManager<IdentityUser> _userManager;
-        private readonly SignInManager<IdentityUser> _signInManager;
+        private readonly UserManager<ApplicationUser> _userManager;
+        private readonly SignInManager<ApplicationUser> _signInManager;
 
         public IndexModel(
-            UserManager<IdentityUser> userManager,
-            SignInManager<IdentityUser> signInManager)
+            UserManager<ApplicationUser> userManager,
+            SignInManager<ApplicationUser> signInManager)
         {
             _userManager = userManager;
             _signInManager = signInManager;
@@ -58,18 +59,38 @@ namespace RadicalGamingWeb.Areas.Identity.Pages.Account.Manage
             [Phone]
             [Display(Name = "Phone number")]
             public string PhoneNumber { get; set; }
+
+            [Required]
+            public string? Name { get; set; }
+            public string? StreetAddress { get; set; }
+            public string? City { get; set; }
+            public string? State { get; set; }
+            public string? PostalCode { get; set; }
+            public IFormFile? ProfilePictureFile { get; set; }
+            public string? ImageUrl { get; set; }
         }
 
-        private async Task LoadAsync(IdentityUser user)
+        private async Task LoadAsync(ApplicationUser user)
         {
             var userName = await _userManager.GetUserNameAsync(user);
             var phoneNumber = await _userManager.GetPhoneNumberAsync(user);
 
             Username = userName;
 
+            var name = user.Name;
+            var streetAddress = user.StreetAddress;
+            var city = user.City;
+            var state = user.State;
+            var postalCode = user.PostalCode;
+
             Input = new InputModel
             {
-                PhoneNumber = phoneNumber
+                PhoneNumber = phoneNumber,
+                Name = name,
+                StreetAddress = streetAddress,
+                City = city,
+                State = state,
+                PostalCode = postalCode
             };
         }
 
@@ -88,6 +109,13 @@ namespace RadicalGamingWeb.Areas.Identity.Pages.Account.Manage
         public async Task<IActionResult> OnPostAsync()
         {
             var user = await _userManager.GetUserAsync(User);
+
+            var name = user.Name;
+            var streetAddress = user.StreetAddress;
+            var city = user.City;
+            var state = user.State;
+            var postalCode = user.PostalCode;
+
             if (user == null)
             {
                 return NotFound($"Unable to load user with ID '{_userManager.GetUserId(User)}'.");
@@ -110,6 +138,34 @@ namespace RadicalGamingWeb.Areas.Identity.Pages.Account.Manage
                 }
             }
 
+            if (Input.Name != user.Name)
+            {
+                user.Name = Input.Name;
+            }
+
+            if (Input.StreetAddress != user.StreetAddress)
+            {
+                user.StreetAddress = Input.StreetAddress;
+            }
+
+
+
+            if (Input.City != user.City)
+            {
+                user.City = Input.City;
+            }
+
+            if (Input.State != user.State)
+            {
+                user.State = Input.State;
+            }
+
+            if (Input.PostalCode != user.PostalCode)
+            {
+                user.PostalCode = Input.PostalCode;
+            }
+
+            await _userManager.UpdateAsync(user);
             await _signInManager.RefreshSignInAsync(user);
             StatusMessage = "Your profile has been updated";
             return RedirectToPage();
