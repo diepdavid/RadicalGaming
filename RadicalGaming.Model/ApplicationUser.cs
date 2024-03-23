@@ -13,15 +13,11 @@ namespace RadicalGaming.Model
     {
         [Required]
         public string Name { get; set; }
-
-        [ValidateNever]
-        public string? ProfilePicturePath { get; set; }
         
         public string? StreetAddress { get; set; }
         public string? City { get; set; }
         public string? State { get; set; }
         public string? PostalCode { get; set; }
-        public string? ImageUrl { get; set; }
         public byte[] ProfilePicture { get; set; }
     }
 }

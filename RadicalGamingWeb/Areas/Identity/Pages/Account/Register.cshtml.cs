@@ -35,8 +35,7 @@ namespace RadicalGamingWeb.Areas.Identity.Pages.Account
         private readonly IUserEmailStore<ApplicationUser> _emailStore;
         private readonly ILogger<RegisterModel> _logger;
         private readonly IEmailSender _emailSender;
-        private readonly IWebHostEnvironment _webHostEnvironment;
-        private readonly IFileUploadService _fileUploadService;
+
 
         public string FilePath;
 
@@ -46,8 +45,6 @@ namespace RadicalGamingWeb.Areas.Identity.Pages.Account
             IUserStore<ApplicationUser> userStore,
             SignInManager<ApplicationUser> signInManager,
             ILogger<RegisterModel> logger,
-            IWebHostEnvironment webHostEnvironment,
-            IFileUploadService fileUploadService,
             IEmailSender emailSender)
         {
             _roleManager = roleManager;
@@ -57,8 +54,6 @@ namespace RadicalGamingWeb.Areas.Identity.Pages.Account
             _signInManager = signInManager;
             _logger = logger;
             _emailSender = emailSender;
-            _fileUploadService = fileUploadService;
-            _webHostEnvironment = webHostEnvironment;
         }
 
         /// <summary>
@@ -126,7 +121,6 @@ namespace RadicalGamingWeb.Areas.Identity.Pages.Account
             public string? State { get; set; }
             public string? PostalCode { get; set; }
             public string? PhoneNumber { get; set; }
-            public byte[] ProfilePicture { get; set; }
         }
 
 
@@ -160,29 +154,6 @@ namespace RadicalGamingWeb.Areas.Identity.Pages.Account
             {
                 
                 var user = CreateUser();
-                if (file != null)
-                {
-                    string wwwRootPath = _webHostEnvironment.WebRootPath;
-                    string fileName = Guid.NewGuid().ToString() + Path.GetExtension(file.FileName);
-                    string filePath = Path.Combine("images", "profile", fileName); // Relative path
-
-                    string directoryPath = Path.Combine(wwwRootPath, "images", "profile");
-                    if (!Directory.Exists(directoryPath))
-                    {
-                        Directory.CreateDirectory(directoryPath);
-                    }
-
-                    using (var fileStream = new FileStream(Path.Combine(wwwRootPath, filePath), FileMode.Create))
-                    {
-                        file.CopyTo(fileStream);
-                    }
-
-                    user.ImageUrl = "/" + filePath; // Save the relative path
-                }
-                else
-                {
-                    user.ImageUrl = "/images/profile/default-profile-picture.png";
-                }
                 
                 await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
