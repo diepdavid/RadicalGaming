@@ -11,6 +11,7 @@ namespace RadicalGaming.Model
 {
     public class ApplicationUser:IdentityUser
     {
+
         [Required]
         public string Name { get; set; }
         
