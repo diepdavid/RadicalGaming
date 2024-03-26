@@ -63,12 +63,43 @@
                                     Add to Cart
                                 </button>
                             </div>
+
+
                         </div>
                     </div>
 
                 </div>
             </div>
         </div>
+
+        <!-- Comment section -->
+        <div class="row">
+            <div class="col-12 col-lg-6 offset-lg-1">
+                <hr> <!-- Divider -->
+                <h4>Comments</h4>
+                <!-- Comment form -->
+                <div class="mb-3">
+                    <label for="comment">Add a comment:</label>
+                    <textarea class="form-control" id="comment" rows="3" name="comment"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit Comment</button>
+                <!-- Display existing comments -->
+                @if (Model.Comments != null && Model.Comments.Any())
+                {
+                    <ul class="list-unstyled mt-3">
+                        @foreach (var comment in Model.Comments)
+                        {
+                            <li>
+                                <strong>@comment.Name:</strong> @comment.Text
+                            </li>
+                        }
+                    </ul>
+                }
+                else
+                {
+                    <p>No comments yet.</p>
+                }
+            </div>
     </div>
 </form>
 
