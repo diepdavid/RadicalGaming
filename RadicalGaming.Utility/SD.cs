@@ -10,7 +10,6 @@ namespace RadicalGaming.Utility
     {
         public const string Role_Customer = "Customer";
         public const string Role_Admin = "Admin";
-        public const string Role_Member = "Member";
 
         public const string StatusPending = "Pending";
         public const string StatusApproved = "Approved";

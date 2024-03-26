@@ -87,11 +87,11 @@ html {
 }
 
 .bg-primary {
-    background-color: #192E2F !important;
+    background-color: #192f1c !important;
 }
 
 .bg-secondary {
-    background-color: #3A595C !important;
+    background-color: #3a5c43 !important;
 }
 
 bg-success {
@@ -248,7 +248,7 @@ bg-success {
 
 .btn-primary {
     color: #fff;
-    background-color: #192E2F;
+    background-color: #3a5c43;
     border-color: #192E2F;
 }
 
@@ -256,7 +256,7 @@ bg-success {
 
     .btn-primary:hover {
         color: #fff;
-        background-color: #445f5e;
+        background-color: #3a595c;
         border-color: #445f5e;
     }
 
