@@ -42,7 +42,5 @@ namespace RadicalGaming.Model
 		public string? PostalCode { get; set; }
 		[Required]
 		public string? PhoneNumber { get; set; }
-
-		
 	}
 }
