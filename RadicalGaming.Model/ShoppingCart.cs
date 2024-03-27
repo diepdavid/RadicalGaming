@@ -29,6 +29,5 @@ namespace RadicalGaming.Model
 
         [NotMapped]
         public double Price { get; set; }
-        public List<Comment> Comments { get; set; }
     }
 }

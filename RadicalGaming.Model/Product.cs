@@ -27,7 +27,5 @@ namespace RadicalGaming.Model
         public Category Category { get; set; }
         [ValidateNever]
         public string ImageUrl { get; set; }
-
-        public List<Comment> Comments { get; set; }
     }
 }
