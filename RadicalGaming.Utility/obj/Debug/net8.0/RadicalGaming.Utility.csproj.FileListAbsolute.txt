@@ -1,0 +1,13 @@
+C:\RadicalGaming\RadicalGaming.Utility\bin\Debug\net8.0\RadicalGaming.Utility.deps.json
+C:\RadicalGaming\RadicalGaming.Utility\bin\Debug\net8.0\RadicalGaming.Utility.dll
+C:\RadicalGaming\RadicalGaming.Utility\bin\Debug\net8.0\RadicalGaming.Utility.pdb
+C:\RadicalGaming\RadicalGaming.Utility\obj\Debug\net8.0\RadicalGaming.Utility.GeneratedMSBuildEditorConfig.editorconfig
+C:\RadicalGaming\RadicalGaming.Utility\obj\Debug\net8.0\RadicalGaming.Utility.AssemblyInfoInputs.cache
+C:\RadicalGaming\RadicalGaming.Utility\obj\Debug\net8.0\RadicalGaming.Utility.AssemblyInfo.cs
+C:\RadicalGaming\RadicalGaming.Utility\obj\Debug\net8.0\RadicalGaming.Utility.csproj.CoreCompileInputs.cache
+C:\RadicalGaming\RadicalGaming.Utility\obj\Debug\net8.0\RadicalGaming.Utility.sourcelink.json
+C:\RadicalGaming\RadicalGaming.Utility\obj\Debug\net8.0\RadicalGaming.Utility.dll
+C:\RadicalGaming\RadicalGaming.Utility\obj\Debug\net8.0\refint\RadicalGaming.Utility.dll
+C:\RadicalGaming\RadicalGaming.Utility\obj\Debug\net8.0\RadicalGaming.Utility.pdb
+C:\RadicalGaming\RadicalGaming.Utility\obj\Debug\net8.0\ref\RadicalGaming.Utility.dll
+C:\RadicalGaming\RadicalGaming.Utility\obj\Debug\net8.0\RadicalGaming.Utility.csproj.AssemblyReference.cache
