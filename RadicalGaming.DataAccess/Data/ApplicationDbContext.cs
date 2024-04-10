@@ -48,7 +48,7 @@ namespace RadicalGaming.DataAccess.Data
                                   "fastest speed and lowest latency ever achieved.",
                     Price = 69,
                     CategoryId = 1,
-                    ImageUrl = ""
+                    ImageUrl = "\\images\\product\\a34bf477-5f34-46de-a3ed-bb7eb0b6b204.jpg"
                 },
                 new Product
                 {
@@ -58,7 +58,7 @@ namespace RadicalGaming.DataAccess.Data
                                   " media keys, Ergonomic wrist rest) Black, Nordic/Swedish layout",
                     Price = 139,
                     CategoryId = 2,
-                    ImageUrl = ""
+                    ImageUrl = "\\images\\product\\ae3bf58b-cc03-4532-87d4-170261cc92ed.jpg"
                 },
                 new Product
                 {
@@ -69,7 +69,7 @@ namespace RadicalGaming.DataAccess.Data
                                   "can take on any challenge.",
                     Price = 39,
                     CategoryId = 3,
-                    ImageUrl = ""
+                    ImageUrl = "\\images\\product\\d848c702-cb12-4baf-a2f4-c960aa58d427.jpg"
                 }
             );
         }
