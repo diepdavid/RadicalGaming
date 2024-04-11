@@ -18,3 +18,23 @@ C:\RadicalGaming\RadicalGaming.DataAccess\bin\Debug\net8.0\RadicalGaming.Utility
 C:\RadicalGaming\RadicalGaming.DataAccess\obj\Debug\net8.0\RadicalGaming.DataAccess.csproj.CopyComplete
 C:\RadicalGaming\RadicalGaming.DataAccess\bin\Debug\net8.0\RadicalGaming.DataAccess.runtimeconfig.json
 C:\RadicalGaming\RadicalGaming.DataAccess\obj\Debug\net8.0\RadicalGaming.DataAccess.genruntimeconfig.cache
+C:\Users\Charl\Desktop\TUC\Fördjupning Programmering\Grupp\Github(8)\RadicalGaming.DataAccess\bin\Debug\net8.0\RadicalGaming.DataAccess.deps.json
+C:\Users\Charl\Desktop\TUC\Fördjupning Programmering\Grupp\Github(8)\RadicalGaming.DataAccess\bin\Debug\net8.0\RadicalGaming.DataAccess.runtimeconfig.json
+C:\Users\Charl\Desktop\TUC\Fördjupning Programmering\Grupp\Github(8)\RadicalGaming.DataAccess\bin\Debug\net8.0\RadicalGaming.DataAccess.dll
+C:\Users\Charl\Desktop\TUC\Fördjupning Programmering\Grupp\Github(8)\RadicalGaming.DataAccess\bin\Debug\net8.0\RadicalGaming.DataAccess.pdb
+C:\Users\Charl\Desktop\TUC\Fördjupning Programmering\Grupp\Github(8)\RadicalGaming.DataAccess\bin\Debug\net8.0\RadicalGaming.Model.dll
+C:\Users\Charl\Desktop\TUC\Fördjupning Programmering\Grupp\Github(8)\RadicalGaming.DataAccess\bin\Debug\net8.0\RadicalGaming.Utility.dll
+C:\Users\Charl\Desktop\TUC\Fördjupning Programmering\Grupp\Github(8)\RadicalGaming.DataAccess\bin\Debug\net8.0\RadicalGaming.Model.pdb
+C:\Users\Charl\Desktop\TUC\Fördjupning Programmering\Grupp\Github(8)\RadicalGaming.DataAccess\bin\Debug\net8.0\RadicalGaming.Utility.pdb
+C:\Users\Charl\Desktop\TUC\Fördjupning Programmering\Grupp\Github(8)\RadicalGaming.DataAccess\obj\Debug\net8.0\RadicalGaming.DataAccess.csproj.AssemblyReference.cache
+C:\Users\Charl\Desktop\TUC\Fördjupning Programmering\Grupp\Github(8)\RadicalGaming.DataAccess\obj\Debug\net8.0\RadicalGaming.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Charl\Desktop\TUC\Fördjupning Programmering\Grupp\Github(8)\RadicalGaming.DataAccess\obj\Debug\net8.0\RadicalGaming.DataAccess.AssemblyInfoInputs.cache
+C:\Users\Charl\Desktop\TUC\Fördjupning Programmering\Grupp\Github(8)\RadicalGaming.DataAccess\obj\Debug\net8.0\RadicalGaming.DataAccess.AssemblyInfo.cs
+C:\Users\Charl\Desktop\TUC\Fördjupning Programmering\Grupp\Github(8)\RadicalGaming.DataAccess\obj\Debug\net8.0\RadicalGaming.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\Charl\Desktop\TUC\Fördjupning Programmering\Grupp\Github(8)\RadicalGaming.DataAccess\obj\Debug\net8.0\RadicalGaming.DataAccess.sourcelink.json
+C:\Users\Charl\Desktop\TUC\Fördjupning Programmering\Grupp\Github(8)\RadicalGaming.DataAccess\obj\Debug\net8.0\RadicalG.EDE242DC.Up2Date
+C:\Users\Charl\Desktop\TUC\Fördjupning Programmering\Grupp\Github(8)\RadicalGaming.DataAccess\obj\Debug\net8.0\RadicalGaming.DataAccess.dll
+C:\Users\Charl\Desktop\TUC\Fördjupning Programmering\Grupp\Github(8)\RadicalGaming.DataAccess\obj\Debug\net8.0\refint\RadicalGaming.DataAccess.dll
+C:\Users\Charl\Desktop\TUC\Fördjupning Programmering\Grupp\Github(8)\RadicalGaming.DataAccess\obj\Debug\net8.0\RadicalGaming.DataAccess.pdb
+C:\Users\Charl\Desktop\TUC\Fördjupning Programmering\Grupp\Github(8)\RadicalGaming.DataAccess\obj\Debug\net8.0\RadicalGaming.DataAccess.genruntimeconfig.cache
+C:\Users\Charl\Desktop\TUC\Fördjupning Programmering\Grupp\Github(8)\RadicalGaming.DataAccess\obj\Debug\net8.0\ref\RadicalGaming.DataAccess.dll

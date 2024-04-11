@@ -11,3 +11,16 @@ C:\RadicalGaming\RadicalGaming.Model\obj\Debug\net8.0\refint\RadicalGaming.Model
 C:\RadicalGaming\RadicalGaming.Model\obj\Debug\net8.0\RadicalGaming.Model.pdb
 C:\RadicalGaming\RadicalGaming.Model\obj\Debug\net8.0\ref\RadicalGaming.Model.dll
 C:\RadicalGaming\RadicalGaming.Model\obj\Debug\net8.0\RadicalGaming.Model.csproj.AssemblyReference.cache
+C:\Users\Charl\Desktop\TUC\Fördjupning Programmering\Grupp\Github(8)\RadicalGaming.Model\bin\Debug\net8.0\RadicalGaming.Model.deps.json
+C:\Users\Charl\Desktop\TUC\Fördjupning Programmering\Grupp\Github(8)\RadicalGaming.Model\bin\Debug\net8.0\RadicalGaming.Model.dll
+C:\Users\Charl\Desktop\TUC\Fördjupning Programmering\Grupp\Github(8)\RadicalGaming.Model\bin\Debug\net8.0\RadicalGaming.Model.pdb
+C:\Users\Charl\Desktop\TUC\Fördjupning Programmering\Grupp\Github(8)\RadicalGaming.Model\obj\Debug\net8.0\RadicalGaming.Model.csproj.AssemblyReference.cache
+C:\Users\Charl\Desktop\TUC\Fördjupning Programmering\Grupp\Github(8)\RadicalGaming.Model\obj\Debug\net8.0\RadicalGaming.Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Charl\Desktop\TUC\Fördjupning Programmering\Grupp\Github(8)\RadicalGaming.Model\obj\Debug\net8.0\RadicalGaming.Model.AssemblyInfoInputs.cache
+C:\Users\Charl\Desktop\TUC\Fördjupning Programmering\Grupp\Github(8)\RadicalGaming.Model\obj\Debug\net8.0\RadicalGaming.Model.AssemblyInfo.cs
+C:\Users\Charl\Desktop\TUC\Fördjupning Programmering\Grupp\Github(8)\RadicalGaming.Model\obj\Debug\net8.0\RadicalGaming.Model.csproj.CoreCompileInputs.cache
+C:\Users\Charl\Desktop\TUC\Fördjupning Programmering\Grupp\Github(8)\RadicalGaming.Model\obj\Debug\net8.0\RadicalGaming.Model.sourcelink.json
+C:\Users\Charl\Desktop\TUC\Fördjupning Programmering\Grupp\Github(8)\RadicalGaming.Model\obj\Debug\net8.0\RadicalGaming.Model.dll
+C:\Users\Charl\Desktop\TUC\Fördjupning Programmering\Grupp\Github(8)\RadicalGaming.Model\obj\Debug\net8.0\refint\RadicalGaming.Model.dll
+C:\Users\Charl\Desktop\TUC\Fördjupning Programmering\Grupp\Github(8)\RadicalGaming.Model\obj\Debug\net8.0\RadicalGaming.Model.pdb
+C:\Users\Charl\Desktop\TUC\Fördjupning Programmering\Grupp\Github(8)\RadicalGaming.Model\obj\Debug\net8.0\ref\RadicalGaming.Model.dll
