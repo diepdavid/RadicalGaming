@@ -116,7 +116,7 @@ namespace RadicalGamingWeb.Areas.Customer.Controllers
 				_unitOfWork.Save();
 			}
 
-			var domain = "https://localhost:7026/";
+			var domain = Request.Scheme+ "://"+ Request.Host.Value +"/";
 			var options = new SessionCreateOptions
 			{
 				SuccessUrl = domain+ $"customer/cart/OrderConfirmation?id={ShoppingCartVM.OrderHeader.Id}",
