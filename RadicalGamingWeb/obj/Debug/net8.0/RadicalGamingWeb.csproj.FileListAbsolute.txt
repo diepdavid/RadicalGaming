@@ -608,3 +608,5 @@ C:\Users\Charl\Desktop\TUC\Fördjupning Programmering\Grupp\Github(8)\RadicalGam
 C:\Users\Charl\Desktop\TUC\Fördjupning Programmering\Grupp\Github(8)\RadicalGamingWeb\obj\Debug\net8.0\RadicalGamingWeb.pdb
 C:\Users\Charl\Desktop\TUC\Fördjupning Programmering\Grupp\Github(8)\RadicalGamingWeb\obj\Debug\net8.0\RadicalGamingWeb.genruntimeconfig.cache
 C:\Users\Charl\Desktop\TUC\Fördjupning Programmering\Grupp\Github(8)\RadicalGamingWeb\obj\Debug\net8.0\ref\RadicalGamingWeb.dll
+C:\RadicalGaming\RadicalGamingWeb\bin\Debug\net8.0\appsettings.Development.json
+C:\RadicalGaming\RadicalGamingWeb\bin\Debug\net8.0\appsettings.Production.json

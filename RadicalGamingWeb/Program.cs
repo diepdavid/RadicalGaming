@@ -4,6 +4,8 @@ using RadicalGaming.DataAccess.Repository;
 using RadicalGaming.DataAccess.Repository.IRepository;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
+using Microsoft.EntityFrameworkCore.Internal;
+using RadicalGaming.DataAccess.DbInitializer;
 using RadicalGaming.Model;
 using RadicalGaming.Utility;
 using Stripe;
@@ -25,6 +27,7 @@ builder.Services.ConfigureApplicationCookie(options =>
     options.AccessDeniedPath = $"/Identity/Account/AccessDenied";
 });
 
+builder.Services.AddScoped<IDbinitializer, Dbinitializer>();
 builder.Services.AddRazorPages();
 builder.Services.AddScoped<IFileUploadService, LocalFileUploadService>();
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
@@ -46,6 +49,7 @@ StripeConfiguration.ApiKey = builder.Configuration.GetSection("Stripe:SecretKey"
 app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
+SeedDatabase();
 app.MapRazorPages();
 app.MapControllerRoute(
     name: "default",
@@ -58,3 +62,12 @@ app.MapControllerRoute(
 
 
 app.Run();
+
+void SeedDatabase()
+{
+    using (var scope = app.Services.CreateScope())
+    {
+       var dbInitializer = scope.ServiceProvider.GetRequiredService<IDbinitializer>();
+       dbInitializer.Initialize();
+    }
+}
