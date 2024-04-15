@@ -54,7 +54,7 @@ app.MapControllerRoute(
 app.MapControllerRoute(
     name: "commentRoute",
     pattern: "Areas/Admin/Controllers/{controller}/{action}/{id?}",
-    defaults: new { area = "Admin", controller = "Comment", action = "AddComment" });
+    defaults: new { area = "Admin", controller = "CommentController", action = "AddComment" });
 
 
 
