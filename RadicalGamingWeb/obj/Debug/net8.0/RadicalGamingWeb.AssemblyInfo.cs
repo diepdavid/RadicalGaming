@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RadicalGamingWeb")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f1a68a36941aa70b0655c40afc11e4dcb52b026d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9c74b71f2c467fb7dfa0d371038a3ad9f11d7f07")]
 [assembly: System.Reflection.AssemblyProductAttribute("RadicalGamingWeb")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RadicalGamingWeb")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

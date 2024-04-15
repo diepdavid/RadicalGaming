@@ -109,64 +109,6 @@ namespace RadicalGamingWeb.Areas.Admin.Controllers
             }
         }
 
-        [HttpPost] // Comment
-
-        public IActionResult AddComment(int productId, string name, string commentText)
-
-        {
-
-            var product = _unitOfWork.Product.Get(u => u.Id == productId);
-
-
-
-            if (product == null)
-
-            {
-
-                return NotFound();
-
-            }
-
-
-
-            // Ensure the product's Comments collection is initialized 
-
-            if (product.Comments == null)
-
-            {
-
-                product.Comments = new List<Comment>();
-
-            }
-
-
-
-            // Create a new comment and add it to the product's Comments collection 
-
-            product.Comments.Add(new Comment
-
-            {
-
-                Name = name,
-
-                Text = commentText
-
-            });
-
-
-
-            // Save changes to the database 
-
-            _unitOfWork.Save();
-
-
-
-            // Redirect back to the product listing page 
-
-            return RedirectToAction("Index");
-
-        }
-
 
         #region API CALLS
 
