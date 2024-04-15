@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\RadicalGaming\\RadicalGaming.Model\\RadicalGaming.Model.csproj": {}
+    "C:\\Users\\Charl\\Desktop\\TUC\\Fördjupning Programmering\\Grupp\\Github(8)\\RadicalGaming.Model\\RadicalGaming.Model.csproj": {}
   },
   "projects": {
-    "C:\\RadicalGaming\\RadicalGaming.Model\\RadicalGaming.Model.csproj": {
+    "C:\\Users\\Charl\\Desktop\\TUC\\Fördjupning Programmering\\Grupp\\Github(8)\\RadicalGaming.Model\\RadicalGaming.Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\RadicalGaming\\RadicalGaming.Model\\RadicalGaming.Model.csproj",
+        "projectUniqueName": "C:\\Users\\Charl\\Desktop\\TUC\\Fördjupning Programmering\\Grupp\\Github(8)\\RadicalGaming.Model\\RadicalGaming.Model.csproj",
         "projectName": "RadicalGaming.Model",
-        "projectPath": "C:\\RadicalGaming\\RadicalGaming.Model\\RadicalGaming.Model.csproj",
-        "packagesPath": "C:\\Users\\David\\.nuget\\packages\\",
-        "outputPath": "C:\\RadicalGaming\\RadicalGaming.Model\\obj\\",
+        "projectPath": "C:\\Users\\Charl\\Desktop\\TUC\\Fördjupning Programmering\\Grupp\\Github(8)\\RadicalGaming.Model\\RadicalGaming.Model.csproj",
+        "packagesPath": "C:\\Users\\Charl\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Charl\\Desktop\\TUC\\Fördjupning Programmering\\Grupp\\Github(8)\\RadicalGaming.Model\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\David\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Charl\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -34,6 +34,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -68,7 +73,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
