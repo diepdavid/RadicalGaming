@@ -57,8 +57,4 @@ app.MapControllerRoute(
     defaults: new { area = "Admin", controller = "CommentController", action = "AddComment" });
 
 
-
-
-
-
 app.Run();
